@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="underscore.js"></script>
+    <script>
+        // 결과가 이상한거같음 (?)
+        var students = [
+            { 이름: '윤인성', 국어: 87, 수학: 98, 영어: 88, 과학: 95},
+            { 이름: '서준서', 국어: 87, 수학: 98, 영어: 88, 과학: 95},
+            { 이름: '홍길동', 국어: 100, 수학: 98, 영어: 100, 과학: 95},
+            { 이름: '하하하', 국어: 100, 수학: 100, 영어: 100, 과학: 100}
+        ];
+
+        var sortByScience = _.sortBy(students, function (item) {
+            return item.과학
+        }).slice(0, 3);
+        alert(JSON.stringify(sortByScience, null, 2));
+
+        var sortByAverage = _.sortBy(students, function (item) {
+            return (item.국어 + item.수학 + item.영어 + item.과학) / 4;
+        }).slice(0, 3);
+        alert(JSON.stringify(sortByAverage, null, 2));
+
+        var scienceTop = _.max(students, function (item) {
+            return item.과학;
+        });
+        alert(JSON.stringify(scienceTop, null, 2));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

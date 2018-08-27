@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var devices = ['iphone', 'ipod', 'android', 'web']; // 스마트폰으로 접속이 불가능해서 'web' 항목 추가
+        for (var i in devices) {
+            if (navigator.userAgent.toLowerCase().match(new RegExp(devices[i]))) {
+                alert('페이지 이동합니다.');
+                location = 'http://m.hanbit.co.kr';
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

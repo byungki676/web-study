@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //window.open('http://hanbit.co.kr', 'child', 'width = 600, height=300', true);
+        var child = window.open('','','width=300, height=200');
+        child.document.write('<h1>From Parent Window</h1>');
+
+        child.moveTo(1920,1080);
+
+        setInterval(function () {
+            child.moveBy(-5,-5)
+        }, 100);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
